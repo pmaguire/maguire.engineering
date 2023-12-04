@@ -1,0 +1,59 @@
+/* Supports weights 100-900 & italic */
+@import '@fontsource-variable/noto-sans-display';
+
+:root {
+	--nav-height: 4rem;
+	--footer-height: 4rem;
+	--fade-style: linear;
+	--theme-transition-time: 1s;
+	--hover-transition-time: 0.15s;
+	font-family: 'Noto Sans Display Variable', -apple-system, sans-serif;
+}
+
+.light-mode {
+	--background-1: #f6f6f6;
+	--background-2: #f0f0f0;
+	--color-text: rgb(47, 47, 47);
+	--hover-color: rgb(145, 41, 41);
+}
+
+.dark-mode {
+	--background-1: #1a1a1a;
+	--background-2: #414141;
+	--color-text: rgb(230, 230, 230);
+	--hover-color: rgb(145, 41, 41);
+}
+
+body {
+	margin: 0;
+	background-color: grey;
+}
+
+* {
+	color: var(--color-text);
+	transition: var(--theme-transition-time) var(--fade-style);
+	transition-property: background, background-color, background-image, border;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 500;
+	transition: var(--hover-transition-time) linear;
+	transition-property: filter;
+}
+
+a:hover {
+	filter: invert(35%);
+}
+
+
