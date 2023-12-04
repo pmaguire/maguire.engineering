@@ -7,7 +7,10 @@
 	--fade-style: linear;
 	--theme-transition-time: 1s;
 	--hover-transition-time: 0.15s;
-	font-family: 'Noto Sans Display Variable', -apple-system, sans-serif;
+	font-family:
+		'Noto Sans Display Variable',
+		-apple-system,
+		sans-serif;
 }
 
 .light-mode {
@@ -36,13 +39,13 @@ body {
 }
 
 button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 a {
@@ -55,5 +58,3 @@ a {
 a:hover {
 	filter: invert(35%);
 }
-
-

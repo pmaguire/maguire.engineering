@@ -1,7 +1,7 @@
 <script>
-	import Header from './Header.svelte';
-	import { theme } from '$lib/stores/theme';
-	import './styles.css';
+	import Header from './Header.svelte'
+	import { theme } from '$lib/stores/theme'
+	import './styles.css'
 </script>
 
 <div class="primary {$theme + '-mode'}">
@@ -12,7 +12,14 @@
 	</main>
 
 	<footer>
-		<p>Designed & Built by Patrick Maguire with ♥️ and <a target="_blank" rel="noopener" href="https://kit.svelte.dev/">Svelte Kit</a> • © {new Date().getFullYear()}</p>
+		<p>
+			Designed & Built by Patrick Maguire with ♥️ and <a
+				target="_blank"
+				rel="noopener"
+				href="https://kit.svelte.dev/">Svelte Kit</a
+			>
+			• © {new Date().getFullYear()}
+		</p>
 	</footer>
 </div>
 
