@@ -16,7 +16,7 @@
 			Designed & Built by Patrick Maguire with ♥️ and <a
 				target="_blank"
 				rel="noopener"
-				href="https://kit.svelte.dev/">Svelte Kit</a
+				href="https://kit.svelte.dev/">SvelteKit</a
 			>
 			• © {new Date().getFullYear()}
 		</p>

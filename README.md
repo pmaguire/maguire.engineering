@@ -4,13 +4,10 @@ Personal website, built with sveltekit, scaffolded via [`create-svelte`](https:/
 
 ## Developing
 
-Start a development server:
+Start a development server and open the app in a new browser tab:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm start
 ```
 
 ## Building
