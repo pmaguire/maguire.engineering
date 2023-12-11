@@ -1,58 +1,35 @@
+<script>
+	import Map from './Map.svelte'
+</script>
+
 <svelte:head>
 	<title>maguire.engineering</title>
 	<meta name="Description" content="Maguire Engineering" />
 </svelte:head>
 
+<section class="hero">
+	<p>Hey, I'm Patrick. I'm a deeply experienced full stack developer and expert problem solver.</p>
+	<p>
+		I love building complex things from start to finish. I'm the teammate who on any given day might
+		figure out the tricky bug, manage an ad-hoc project, onboard and mentor a new hire, build out
+		some cloud infrastructure, all while writing first class code. I'm the general all-rounder that
+		glues teams together and keeps the big picture in mind, no matter the size of the team.
+	</p>
+	<p>A few things I'm great at:</p>
+	<p>Possible columns: Tech, Soft Skills, ?</p>
+	<p>My Story: (add downward arrow?) - prompt by showing map with full paths from start to end?</p>
+	<p>
+		Older paths are more subtle then current ones. Same with points. Something to clearly indicate
+		where I live now.
+	</p>
+</section>
+
 <section>
-	<h1>MAGUIRE.ENGINEERING</h1>
-	<p>Coming soon...</p>
-	<br />
-	<p>For now, check out</p>
-	<br />
-	<br />
-	<br />
-	<br />
-	<div>
-		<h2>Filler Content 1</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-	</div>
-	<br />
-	<br />
-	<div>
-		<h2>Filler Content 2</h2>
-		<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-	<br />
-	<br />
-	<div>
-		<h2>Filler Content 3</h2>
-		<p>
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-			commodo consequat.
-		</p>
-	</div>
-	<div>
-		<h2>Filler Content 4</h2>
-		<p>
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-			commodo consequat.
-		</p>
-	</div>
-	<div>
-		<h2>Filler Content 5</h2>
-		<p>
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-			commodo consequat.
-		</p>
-	</div>
-	<div>
-		<h2>Filler Content 6</h2>
-		<p>
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-			commodo consequat.
-		</p>
-	</div>
+	<Map />
 </section>
 
 <style>
+	.hero {
+		padding: var(--outside-padding);
+	}
 </style>

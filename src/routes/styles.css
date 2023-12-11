@@ -4,13 +4,21 @@
 :root {
 	--nav-height: 4rem;
 	--footer-height: 4rem;
+	--outside-padding: 2rem;
 	--fade-style: linear;
 	--theme-transition-time: 1s;
 	--hover-transition-time: 0.15s;
+	--media-query-width: 500px;
 	font-family:
 		'Noto Sans Display Variable',
 		-apple-system,
 		sans-serif;
+}
+
+@media (max-width: 550px) {
+	:root {
+		--outside-padding: 1rem;
+	}
 }
 
 .light-mode {
@@ -29,7 +37,7 @@
 
 body {
 	margin: 0;
-	background-color: grey;
+	padding: 0;
 }
 
 * {

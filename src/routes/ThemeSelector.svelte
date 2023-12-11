@@ -1,5 +1,6 @@
 <script>
 	import { theme } from '$lib/stores/theme'
+	import tooltip from '$lib/tooltip'
 
 	let moonRotation = $theme === 'light' ? 0 : 180
 	let sunRotation = $theme === 'light' ? 180 : 0
@@ -11,7 +12,7 @@
 	}
 </script>
 
-<button on:click={click} title="Enable {$theme === 'light' ? 'dark' : 'light'} mode">
+<button on:click={click} title="Enable {$theme === 'light' ? 'dark' : 'light'} mode" use:tooltip>
 	<span class="sun {$theme}" style="transform: rotate({sunRotation}deg)">🌞</span>
 	<span class="moon {$theme}" style="transform: rotate({moonRotation}deg)">🌒</span>
 	<div class="horizon" />
@@ -19,6 +20,7 @@
 
 <style>
 	button {
+		margin-right: var(--outside-padding);
 		vertical-align: middle;
 		width: 2rem;
 		height: 2rem;
@@ -45,7 +47,7 @@
 		width: 2.5rem;
 		height: 1rem;
 		background-color: var(--background-1);
-		z-index: 2;
+		z-index: 3;
 		position: absolute;
 		bottom: 0.25rem;
 	}

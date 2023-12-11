@@ -20,6 +20,7 @@
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.27.4",
+		"@types/mapbox-gl": "^2.7.19",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"eslint": "^8.28.0",
@@ -40,6 +41,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/noto-sans-display": "^5.0.18",
+		"mapbox-gl": "^3.0.0",
 		"svelte-persisted-store": "^0.7.0"
 	},
 	"prettier": {
