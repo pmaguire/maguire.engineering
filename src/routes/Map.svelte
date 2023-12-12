@@ -13,24 +13,28 @@
 	const locations = {
 		'los-angeles': {
 			center: [-118.285272, 34.020508],
-			zoom: 14,
+			zoom: 13,
 			// duration: 6000,
 			// speed: 0.6,
 		},
 		tanzania: {
 			center: [33.565264, -1.792723],
-			zoom: 13,
+			zoom: 10,
 		},
 		'south-sudan': {
 			center: [33.057843, 8.610288],
-			zoom: 13,
+			zoom: 7,
 		},
 		haiti: {
 			center: [-72.299317, 18.554858],
-			zoom: 13.5,
+			zoom: 11,
 		},
 		oakland: {
 			center: [-122.274398, 37.793933],
+			zoom: 13,
+		},
+		colorado: {
+			center: [-105.204706, 40.071132],
 			zoom: 13,
 		},
 	}
@@ -44,22 +48,88 @@
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>USC</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+							'<strong>USC</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 					},
 					geometry: {
 						type: 'Point',
-						coordinates: [-118.28532088157374, 34.02114250059563],
+						coordinates: [-118.28532, 34.0211425],
 					},
 				},
 				{
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>USC</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+							'<strong>Kasoma Secondary School</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 					},
 					geometry: {
 						type: 'Point',
-						coordinates: [-118.285, 34.02],
+						coordinates: [33.565264, -1.792723],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Nasir</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [33.057843, 8.610288],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Rom</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [32.148918, 9.882728],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Delmas 33 Emergency Obstetrics Hospital</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-72.299317, 18.554858],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Carrefour Cholera Response</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-72.403943, 18.53765],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Sungevity</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-122.274398, 37.793933],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Catalyze</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-105.204706, 40.071132],
 					},
 				},
 			],
@@ -256,12 +326,29 @@
 			congue mauris.
 		</p>
 	</section>
+	<section id="colorado">
+		<h3>Colorado</h3>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
+			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
+			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
+			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
+			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
+			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
+			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
+			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
+			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
+			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
+			congue mauris.
+		</p>
+	</section>
 </div>
 
 <style>
 	.scroller {
 		position: relative;
-		height: 7000px;
+		height: 10000px;
 	}
 	.map-wrap {
 		top: var(--nav-height);
@@ -275,23 +362,31 @@
 	}
 	section {
 		position: absolute;
-		width: 20%;
+		min-width: 280px;
+		max-width: 50%;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 1rem;
-		background: var(--background-1);
+		background: rgb(var(--background-3-rgb), 0.5);
 	}
 	section:nth-of-type(1) {
-		top: 500px;
+		top: 1000px;
 	}
 	section:nth-of-type(2) {
-		top: 2000px;
+		top: 2500px;
 	}
 	section:nth-of-type(3) {
-		top: 3500px;
+		top: 4000px;
 	}
 	section:nth-of-type(4) {
-		top: 5000px;
+		top: 5500px;
 	}
 	section:nth-of-type(5) {
-		top: 6500px;
+		top: 7000px;
+	}
+	section:nth-of-type(6) {
+		top: 8500px;
 	}
 </style>

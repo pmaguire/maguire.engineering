@@ -22,15 +22,19 @@
 }
 
 .light-mode {
-	--background-1: #f6f6f6;
-	--background-2: #f0f0f0;
+	--background-1: rgb(245, 245, 245);
+	--background-2: rgb(240, 240, 240);
+	--background-3-rgb: 225, 225, 225;
+	--background-3: rgb(--background-3-rgb);
 	--color-text: rgb(47, 47, 47);
 	--hover-color: rgb(145, 41, 41);
 }
 
 .dark-mode {
-	--background-1: #1a1a1a;
-	--background-2: #414141;
+	--background-1: rgb(26, 26, 26);
+	--background-2: rgb(64, 64, 64);
+	--background-3-rgb: 92, 92, 92;
+	--background-3: rgb(--background-3-rgb);
 	--color-text: rgb(230, 230, 230);
 	--hover-color: rgb(145, 41, 41);
 }
