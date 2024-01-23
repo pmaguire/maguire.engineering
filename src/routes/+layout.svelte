@@ -30,7 +30,7 @@
 				rel="noopener"
 				href="https://kit.svelte.dev/">SvelteKit</a
 			>
-			• © {new Date().getFullYear()}
+			• © 2023 - {new Date().getFullYear()}
 		</p>
 	</footer>
 </div>

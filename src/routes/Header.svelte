@@ -1,18 +1,24 @@
 <script>
 	import ThemeSelector from './ThemeSelector.svelte'
 	import tooltip from '$lib/tooltip'
+	import MeIcon from './MeIconSvg.svelte'
 </script>
 
 <header>
 	<div class="home-link">
-		<a href="/"><span class="title-a">MAGUIRE</span><span class="title-b">.ENGINEERING</span></a>
+		<a href="/">
+			<MeIcon />
+			<div>
+				<span class="title-a">MAGUIRE</span><span class="title-b">.ENGINEERING</span>
+			</div>
+		</a>
 	</div>
 	<div class="buttons">
 		<nav>
 			<a href="/about">About</a>
 			<a href="/blog">Blog</a>
 			<a
-				title="Linked In"
+				title="LinkedIn"
 				use:tooltip
 				target="_blank"
 				rel="noopener"
@@ -71,18 +77,24 @@
 
 	.home-link {
 		padding-left: var(--outside-padding);
-	}
-
-	.home-link a {
-		font-weight: 300;
-		letter-spacing: 0.2rem;
+		& a {
+			font-weight: 300;
+			letter-spacing: 0.2rem;
+			display: inline-flex;
+			align-items: center;
+			vertical-align: middle;
+		}
+		& svg {
+			padding-right: 1rem;
+		}
 	}
 
 	nav {
-		display: inline-block;
+		display: flex;
 		padding-left: 1rem;
 		& a {
 			padding: 0 0.4rem;
+			display: flex;
 		}
 	}
 
