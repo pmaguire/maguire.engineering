@@ -15,7 +15,7 @@
 	</div>
 	<div class="buttons">
 		<nav>
-			<a href="/about">About</a>
+			<a href="/contact">Contact</a>
 			<a href="/blog">Blog</a>
 			<a
 				title="LinkedIn"

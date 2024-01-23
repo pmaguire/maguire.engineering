@@ -6,7 +6,7 @@
 	import { PUBLIC_MAPBOX_ACCESS_TOKEN } from '$env/static/public'
 
 	let map
-	let mapContainer
+	let mapContainer, topBanner, bottomBanner
 
 	const locId1 = 'los-angeles'
 
@@ -14,28 +14,40 @@
 		'los-angeles': {
 			center: [-118.285272, 34.020508],
 			zoom: 13,
+			topBanner: 'Los Angeles',
+			bottomBanner: '2001 - 2005',
 			// duration: 6000,
 			// speed: 0.6,
 		},
 		tanzania: {
 			center: [33.565264, -1.792723],
 			zoom: 10,
+			topBanner: 'Tanzania',
+			bottomBanner: '2005 - 2007',
 		},
 		'south-sudan': {
 			center: [33.057843, 8.610288],
 			zoom: 7,
+			topBanner: 'South Sudan',
+			bottomBanner: '2009',
 		},
 		haiti: {
 			center: [-72.299317, 18.554858],
 			zoom: 11,
+			topBanner: 'Haiti',
+			bottomBanner: '2010 - 2011',
 		},
 		oakland: {
 			center: [-122.274398, 37.793933],
 			zoom: 13,
+			topBanner: 'Oakland',
+			bottomBanner: '2011 - 2017',
 		},
 		colorado: {
 			center: [-105.204706, 40.071132],
 			zoom: 13,
+			topBanner: 'Colorado',
+			bottomBanner: '2018 - Present',
 		},
 	}
 
@@ -162,6 +174,9 @@
 			interactive: false,
 		})
 
+		topBanner.innerHTML = locations[locId1].topBanner
+		bottomBanner.innerHTML = locations[locId1].bottomBanner
+
 		map.on(['style.load'], function () {
 			addPoisLayer()
 		})
@@ -207,6 +222,8 @@
 
 			document.getElementById(location).classList.add('active')
 			document.getElementById(activeLocation)?.classList.remove('active')
+			topBanner.innerHTML = locations[location].topBanner
+			bottomBanner.innerHTML = locations[location].bottomBanner
 
 			activeLocation = location
 		}
@@ -239,6 +256,10 @@
 
 <div class="scroller">
 	<div class="map-wrap">
+		<div class="banners">
+			<span class="banner top" bind:this={topBanner} />
+			<span class="banner bottom" bind:this={bottomBanner} />
+		</div>
 		<div class="map" bind:this={mapContainer} />
 	</div>
 	<section id="los-angeles" class="active">
@@ -357,8 +378,27 @@
 		position: sticky;
 		overflow: hidden;
 	}
+	.banner {
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		z-index: 1;
+		font-size: 1.5rem;
+		letter-spacing: 0.7rem;
+		font-weight: 600;
+		opacity: 0.4;
+		&.top {
+			top: 1rem;
+		}
+		&.bottom {
+			bottom: 2rem;
+		}
+	}
 	.map {
-		height: 100vh;
+		height: calc(100vh - var(--nav-height));
 	}
 	section {
 		position: absolute;

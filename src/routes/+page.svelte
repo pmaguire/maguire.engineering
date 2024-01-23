@@ -60,6 +60,12 @@
 	<Map />
 </section>
 
+<section>
+	<p>
+		Looking for more? Check out my <a href="/blog">blog</a> or <a href="/contact">contact</a> me.
+	</p>
+</section>
+
 <style>
 	.hero {
 		padding: var(--outside-padding);
