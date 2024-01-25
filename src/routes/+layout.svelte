@@ -42,7 +42,7 @@
 		justify-content: space-between;
 		background: var(--background-1);
 		align-items: center;
-		padding: 0 var(--outside-padding);
+		padding: 0 var(--outside-margin);
 	}
 
 	.primary {
@@ -50,6 +50,7 @@
 	}
 
 	main {
+		margin: 0 var(--outside-margin);
 		background-color: var(--background-2);
 	}
 </style>

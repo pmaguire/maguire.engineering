@@ -4,7 +4,7 @@
 :root {
 	--nav-height: 4rem;
 	--footer-height: 4rem;
-	--outside-padding: 2rem;
+	--outside-margin: 2rem;
 	--fade-style: linear;
 	--theme-transition-time: 1s;
 	--hover-transition-time: 0.15s;
@@ -17,13 +17,13 @@
 
 @media (max-width: 550px) {
 	:root {
-		--outside-padding: 1rem;
+		--outside-margin: 1rem;
 	}
 }
 
 .light-mode {
 	--background-1: rgb(245, 245, 245);
-	--background-2: rgb(240, 240, 240);
+	--background-2: rgb(230, 230, 230);
 	--background-3-rgb: 225, 225, 225;
 	--background-3: rgb(--background-3-rgb);
 	--color-text: rgb(47, 47, 47);
@@ -44,6 +44,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background: var(--background-2);
 }
 
 * {

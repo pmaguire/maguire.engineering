@@ -377,6 +377,7 @@
 		width: 100vw;
 		position: sticky;
 		overflow: hidden;
+		margin-left: calc(-1 * var(--outside-margin));
 	}
 	.banner {
 		position: absolute;
@@ -386,7 +387,7 @@
 		right: 0;
 		text-align: center;
 		z-index: 1;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		letter-spacing: 0.7rem;
 		font-weight: 600;
 		opacity: 0.4;

@@ -75,7 +75,7 @@
 	}
 
 	.home-link {
-		padding-left: var(--outside-padding);
+		margin-left: var(--outside-margin);
 		& a {
 			font-weight: 300;
 			letter-spacing: 0.2rem;

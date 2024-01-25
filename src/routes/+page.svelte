@@ -68,7 +68,7 @@
 
 <style>
 	.hero {
-		padding: var(--outside-padding);
+		margin: var(--outside-margin) 0;
 	}
 	.columns {
 		display: grid;
