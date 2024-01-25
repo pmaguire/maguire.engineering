@@ -1,13 +1,12 @@
 <script>
 	import ThemeSelector from './ThemeSelector.svelte'
 	import tooltip from '$lib/tooltip'
-	import MeIcon from './MeIconSvg.svelte'
 </script>
 
 <header>
 	<div class="home-link">
 		<a href="/">
-			<MeIcon />
+			<span class="main-icon">/<span class="red">.*</span>/</span>
 			<div>
 				<span class="title-a">MAGUIRE</span><span class="title-b">.ENGINEERING</span>
 			</div>
@@ -89,11 +88,23 @@
 		}
 	}
 
+	.main-icon {
+		color: var(--color-text);
+		letter-spacing: 0.01rem;
+		font-weight: 700;
+		font-size: 1.5rem;
+		padding-right: 1rem;
+	}
+
+	.red {
+		color: var(--color-red);
+	}
+
 	nav {
 		display: flex;
 		padding-left: 1rem;
 		& a {
-			padding: 0 0.4rem;
+			padding: 0 0.5rem;
 			display: flex;
 		}
 	}
@@ -108,7 +119,7 @@
 			position: relative;
 		}
 		.home-link span {
-			display: block;
+			display: flex;
 		}
 		nav a {
 			padding: 0 0.2rem;

@@ -28,6 +28,7 @@
 	--background-3: rgb(--background-3-rgb);
 	--color-text: rgb(47, 47, 47);
 	--hover-color: rgb(145, 41, 41);
+	--color-red: rgb(185, 0, 0);
 }
 
 .dark-mode {
@@ -37,6 +38,7 @@
 	--background-3: rgb(--background-3-rgb);
 	--color-text: rgb(230, 230, 230);
 	--hover-color: rgb(145, 41, 41);
+	--color-red: rgb(185, 0, 0);
 }
 
 body {
