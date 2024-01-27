@@ -8,9 +8,14 @@
 	let map
 	let mapContainer, topBanner, bottomBanner
 
-	const locId1 = 'los-angeles'
+	const defaultLoc = 'start'
 
 	const locations = {
+		start: {
+			center: [-118.285272, 34.020508],
+			zoom: 2,
+			speed: 2,
+		},
 		'los-angeles': {
 			center: [-118.285272, 34.020508],
 			zoom: 13,
@@ -185,13 +190,13 @@
 			container: mapContainer,
 			accessToken: PUBLIC_MAPBOX_ACCESS_TOKEN,
 			style: `mapbox://styles/mapbox/${$theme}-v11`,
-			center: locations[locId1].center,
-			zoom: locations[locId1].zoom,
+			center: locations[defaultLoc].center,
+			zoom: locations[defaultLoc].zoom,
 			interactive: false,
 		})
 
-		topBanner.innerHTML = locations[locId1].topBanner || ''
-		bottomBanner.innerHTML = locations[locId1].bottomBanner
+		topBanner.innerHTML = locations[defaultLoc].topBanner || ''
+		bottomBanner.innerHTML = locations[defaultLoc].bottomBanner || ''
 
 		map.on(['style.load'], function () {
 			addPoisLayer()
@@ -203,6 +208,7 @@
 
 		await map.once('load')
 		addPoisLayer()
+		spinGlobe()
 
 		const popup = new Popup({
 			closeButton: false,
@@ -239,7 +245,7 @@
 			document.getElementById(location).classList.add('active')
 			document.getElementById(activeLocation)?.classList.remove('active')
 			topBanner.innerHTML = locations[location].topBanner || ''
-			bottomBanner.innerHTML = locations[location].bottomBanner
+			bottomBanner.innerHTML = locations[location].bottomBanner || ''
 
 			activeLocation = location
 		}
@@ -302,6 +308,11 @@
 			found I didn't love the options Civil Engineering was giving me, so after graduation I headed
 			to Tanzania as a Peace Corps volunteer.
 		</p>
+		<img
+			class="picture"
+			src="/usc-welding.jpg"
+			alt="Patrick Maguire welding some metal together at USC"
+		/>
 	</section>
 	<section id="tanzania">
 		<span class="title-block">
@@ -314,11 +325,12 @@
 			engineering education however, and coordinated a few construction projects including water
 			supply for the dormitories and rehabilitation of some teacher housing.
 		</p>
+		<img class="picture" src="/peace-corps-windpump.jpg" alt="Repairing a windpump in Tanzania" />
 	</section>
 	<section id="south-sudan">
 		<span class="title-block">
 			<img class="icon" src="/msf-logo.png" alt="Doctors Without Borders running person logo" />
-			<h3>Doctors Without Borders</h3>
+			<h3>Doctors Without Borders - South Sudan</h3>
 		</span>
 		<p>
 			Between my Peace Corps experience and engineering background, I just managed to qualify for
@@ -328,11 +340,12 @@
 			both technical and managerial roles. I spent the last month as part of an outbreak response
 			team, investigating and treating victims of a visceral leishmaniasis (Kala Azar) outbreak.
 		</p>
+		<img class="picture" src="/msf-rom-leaving.jpg" alt="Walking to the airstrip in Rom" />
 	</section>
 	<section id="haiti">
 		<span class="title-block">
 			<img class="icon" src="/msf-logo.png" alt="Doctors Without Borders running person logo" />
-			<h3>Doctors Without Borders</h3>
+			<h3>Doctors Without Borders - Haiti</h3>
 		</span>
 		<p>
 			After a devastating earthquake hit Haiti in early 2010, I joined MSF's emergency response,
@@ -342,10 +355,15 @@
 			emergency obstetrics hospital. I spent the last 6 months of my 13 month stay building and
 			operating cholera treatment centers, as we transitioned to fighting the outbreak.
 		</p>
+		<img
+			class="picture"
+			src="/msf-haiti-construction.jpg"
+			alt="A hospital under construction in Haiti"
+		/>
 	</section>
 	<section id="oakland">
 		<span class="title-block">
-			<img class="icon" src="/sungevity-logo.png" alt="Sungevity sfunstar logo" />
+			<img class="icon" src="/sungevity-logo.png" alt="Sungevity Sfunstar logo" />
 			<h3>Sungevity</h3>
 		</span>
 		<p>
@@ -358,6 +376,11 @@
 			decided I like writing code too much to stop being an individual contributor, and moved to the
 			DevOps team, where I remained until Sungevity unfortunately went bankrupt.
 		</p>
+		<img
+			class="picture"
+			src="/sungevity-solar-install.jpg"
+			alt="Patrick doing a volunteer solar install with Sungevity"
+		/>
 	</section>
 	<section id="colorado">
 		<span class="title-block">
@@ -373,6 +396,7 @@
 			processes, and helped hire and build out the highest functioning software team I've ever had
 			the joy of working with.
 		</p>
+		<img class="picture" src="/catalyze-team-hike.jpg" alt="The Catalyze software team on a hike" />
 	</section>
 	<section id="summary">
 		<span class="title-block">
@@ -385,6 +409,11 @@
 			team to call home. I'm especially interested in the areas of climate tech and renewable
 			energy, but I'd consider any organization working to make the world a better place.
 		</p>
+		<img
+			class="picture"
+			src="/patrick-hiking.jpg"
+			alt="Patrick on a solo hike high in the mountains"
+		/>
 	</section>
 </div>
 
@@ -428,7 +457,7 @@
 		align-items: center;
 		vertical-align: middle;
 		& h3 {
-			margin-left: 1rem;
+			margin: 0 0.75rem;
 		}
 	}
 	.icon {
@@ -438,6 +467,10 @@
 		font-size: 2rem;
 		height: 2rem;
 		width: 2rem;
+	}
+	.picture {
+		width: 100%;
+		opacity: 0.8;
 	}
 	section {
 		position: absolute;
@@ -449,6 +482,21 @@
 		margin-right: auto;
 		padding: 1rem;
 		background: rgb(var(--background-3-rgb), 0.5);
+	}
+	@media (max-width: 800px) {
+		section {
+			max-width: 70%;
+		}
+	}
+	@media (max-width: 550px) {
+		section {
+			max-width: 85%;
+		}
+	}
+	@media (min-width: 1200px) {
+		section {
+			max-width: 600px;
+		}
 	}
 	section:nth-of-type(1) {
 		top: 1000px;
@@ -469,6 +517,6 @@
 		top: 8500px;
 	}
 	section:nth-of-type(7) {
-		top: calc(var(--scroller-height) - 100vh * 3 / 5);
+		top: calc(var(--scroller-height) - 100vh * 0.8);
 	}
 </style>
