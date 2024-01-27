@@ -20,7 +20,6 @@
 
 <style>
 	button {
-		margin-right: var(--outside-margin);
 		vertical-align: middle;
 		width: 2rem;
 		height: 2rem;

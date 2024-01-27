@@ -17,13 +17,14 @@
 			topBanner: 'Los Angeles',
 			bottomBanner: '2001 - 2005',
 			// duration: 6000,
-			// speed: 0.6,
+			speed: 2,
 		},
 		tanzania: {
 			center: [33.565264, -1.792723],
 			zoom: 10,
 			topBanner: 'Tanzania',
 			bottomBanner: '2005 - 2007',
+			speed: 2,
 		},
 		'south-sudan': {
 			center: [33.057843, 8.610288],
@@ -36,18 +37,25 @@
 			zoom: 11,
 			topBanner: 'Haiti',
 			bottomBanner: '2010 - 2011',
+			speed: 1.5,
 		},
 		oakland: {
 			center: [-122.274398, 37.793933],
 			zoom: 13,
-			topBanner: 'Oakland',
+			topBanner: 'Oakland, California',
 			bottomBanner: '2011 - 2017',
 		},
 		colorado: {
 			center: [-105.204706, 40.071132],
 			zoom: 13,
-			topBanner: 'Colorado',
-			bottomBanner: '2018 - Present',
+			topBanner: 'Boulder, Colorado',
+			bottomBanner: '2018 - 2023',
+		},
+		summary: {
+			center: [-72.299317, 18.554858],
+			zoom: 2,
+			bottomBanner: '2024 - ?',
+			speed: 2,
 		},
 	}
 
@@ -59,8 +67,7 @@
 				{
 					type: 'Feature',
 					properties: {
-						description:
-							'<strong>USC</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+						description: '<strong>USC Main Campus</strong>',
 					},
 					geometry: {
 						type: 'Point',
@@ -70,8 +77,7 @@
 				{
 					type: 'Feature',
 					properties: {
-						description:
-							'<strong>Kasoma Secondary School</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+						description: '<strong>Kasoma Secondary School</strong>',
 					},
 					geometry: {
 						type: 'Point',
@@ -82,7 +88,7 @@
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>Nasir</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+							'<strong>Nasir</strong><p>MSF Field Hospital, 60 beds and Operating Theater</p>',
 					},
 					geometry: {
 						type: 'Point',
@@ -93,7 +99,7 @@
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>Rom</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+							'<strong>Rom</strong><p>Kala Azar outbreak emergency assessment and response.</p>',
 					},
 					geometry: {
 						type: 'Point',
@@ -104,7 +110,18 @@
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>Delmas 33 Emergency Obstetrics Hospital</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+							'<strong>Petionville Tent Encampment</strong><p>Health clinic for Haitians displaced by the earthquake</p>',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-72.302715, 18.537593],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						description:
+							'<strong>Delmas 33 Emergency Obstetrics</strong><p>120 bed pre-fabricated hospital</p>',
 					},
 					geometry: {
 						type: 'Point',
@@ -114,8 +131,7 @@
 				{
 					type: 'Feature',
 					properties: {
-						description:
-							'<strong>Carrefour Cholera Response</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+						description: '<strong>Carrefour Cholera Response</strong>',
 					},
 					geometry: {
 						type: 'Point',
@@ -126,7 +142,7 @@
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>Sungevity</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+							'<strong>Sungevity Headquarters</strong><p>Residential Solar financing and installation</p>',
 					},
 					geometry: {
 						type: 'Point',
@@ -137,7 +153,7 @@
 					type: 'Feature',
 					properties: {
 						description:
-							'<strong>Catalyze</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+							'<strong>Catalyze Headquarters</strong><p>Commercial and Industrial renewable energy financing and construction</p>',
 					},
 					geometry: {
 						type: 'Point',
@@ -174,7 +190,7 @@
 			interactive: false,
 		})
 
-		topBanner.innerHTML = locations[locId1].topBanner
+		topBanner.innerHTML = locations[locId1].topBanner || ''
 		bottomBanner.innerHTML = locations[locId1].bottomBanner
 
 		map.on(['style.load'], function () {
@@ -222,7 +238,7 @@
 
 			document.getElementById(location).classList.add('active')
 			document.getElementById(activeLocation)?.classList.remove('active')
-			topBanner.innerHTML = locations[location].topBanner
+			topBanner.innerHTML = locations[location].topBanner || ''
 			bottomBanner.innerHTML = locations[location].bottomBanner
 
 			activeLocation = location
@@ -245,14 +261,25 @@
 				}
 			}
 		}
+
+		function spinGlobe() {
+			const zoom = map.getZoom()
+			if (zoom <= 3) {
+				const center = map.getCenter()
+				center.lng += 5
+				map.easeTo({ center, duration: 1000, easing: n => n })
+			}
+		}
+
+		map.on('moveend', () => {
+			spinGlobe()
+		})
 	})
 
 	onDestroy(() => {
 		map.remove()
 	})
 </script>
-
-<head> </head>
 
 <div class="scroller">
 	<div class="map-wrap">
@@ -263,105 +290,100 @@
 		<div class="map" bind:this={mapContainer} />
 	</div>
 	<section id="los-angeles" class="active">
-		<h3>Los Angeles</h3>
+		<span class="title-block">
+			<img class="icon" src="/usc-logo.svg" alt="Seal for the University of Southern California" />
+			<h3>University of Southern California</h3>
+		</span>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
-			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
-			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
-			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
-			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
-			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
-			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
-			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
-			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
-			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
-			congue mauris.
+			I studied Civil Engineering, with an emphasis in Building Science & Architecture. I took a few
+			programming courses on the side, and mildly regretted not choosing Computer Science as my
+			major. I found I deeply enjoyed any extracurriculars involving building things with my hands,
+			and got pretty good at metalworking and welding as a result. After a few summer internships I
+			found I didn't love the options Civil Engineering was giving me, so after graduation I headed
+			to Tanzania as a Peace Corps volunteer.
 		</p>
 	</section>
 	<section id="tanzania">
-		<h3>Tanzania</h3>
+		<span class="title-block">
+			<img class="icon" src="/peace-corps-logo.svg" alt="Peace Corps circular logo" />
+			<h3>Peace Corps</h3>
+		</span>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
-			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
-			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
-			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
-			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
-			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
-			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
-			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
-			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
-			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
-			congue mauris.
+			I lived in Tanzania for two years and three months, teaching physics and mathematics to high
+			schoolers at a remote campus on the shores of Lake Victoria. I didn't fully escape my
+			engineering education however, and coordinated a few construction projects including water
+			supply for the dormitories and rehabilitation of some teacher housing.
 		</p>
 	</section>
 	<section id="south-sudan">
-		<h3>South Sudan</h3>
+		<span class="title-block">
+			<img class="icon" src="/msf-logo.png" alt="Doctors Without Borders running person logo" />
+			<h3>Doctors Without Borders</h3>
+		</span>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
-			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
-			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
-			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
-			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
-			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
-			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
-			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
-			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
-			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
-			congue mauris.
+			Between my Peace Corps experience and engineering background, I just managed to qualify for
+			Doctors Without Borders (aka Médecins Sans Frontières), and spent 10 months in South Sudan as
+			a Technical Logistician at a remote hospital. I've never had as challenging or rewarding of a
+			job in my life, and I learned an incredible amount while being responsible for a huge range of
+			both technical and managerial roles. I spent the last month as part of an outbreak response
+			team, investigating and treating victims of a visceral leishmaniasis (Kala Azar) outbreak.
 		</p>
 	</section>
 	<section id="haiti">
-		<h3>Haiti</h3>
+		<span class="title-block">
+			<img class="icon" src="/msf-logo.png" alt="Doctors Without Borders running person logo" />
+			<h3>Doctors Without Borders</h3>
+		</span>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
-			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
-			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
-			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
-			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
-			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
-			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
-			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
-			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
-			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
-			congue mauris.
+			After a devastating earthquake hit Haiti in early 2010, I joined MSF's emergency response,
+			this time focusing on the construction and management side of things. For the first month, I
+			helped build and run a medical clinic in one of the largest tent encampments in
+			Port-au-Prince. I then transitioned to coordinating the construction of a replacement 120 bed
+			emergency obstetrics hospital. I spent the last 6 months of my 13 month stay building and
+			operating cholera treatment centers, as we transitioned to fighting the outbreak.
 		</p>
 	</section>
 	<section id="oakland">
-		<h3>Oakland</h3>
+		<span class="title-block">
+			<img class="icon" src="/sungevity-logo.png" alt="Sungevity sfunstar logo" />
+			<h3>Sungevity</h3>
+		</span>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
-			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
-			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
-			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
-			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
-			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
-			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
-			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
-			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
-			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
-			congue mauris.
+			After spending most of my 20s out of the country, I was ready to stay in one place and find a
+			more traditional line of work. My experiences in MSF had introduced me to various forms of
+			renewable energy, and I decided to join the booming residential solar industry. I joined
+			Sungevity as an entry level solar designer, but quickly transferred to the software team,
+			utilizing my management, organization, and learn as I go skills to climb to the position of
+			Director of Quality Assurance within 4 years. After trying out management for a year, I
+			decided I like writing code too much to stop being an individual contributor, and moved to the
+			DevOps team, where I remained until Sungevity unfortunately went bankrupt.
 		</p>
 	</section>
 	<section id="colorado">
-		<h3>Colorado</h3>
+		<span class="title-block">
+			<img class="icon" src="/catalyze-logo.png" alt="Catalyze basic logo" />
+			<h3>Catalyze</h3>
+		</span>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget. Arcu dictum
-			varius duis at. Aliquet nibh praesent tristique magna. Ipsum faucibus vitae aliquet nec
-			ullamcorper sit amet risus. Felis bibendum ut tristique et egestas quis ipsum suspendisse
-			ultrices. Enim ut sem viverra aliquet. Libero justo laoreet sit amet. Vitae semper quis lectus
-			nulla at. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vestibulum lorem sed risus
-			ultricies tristique nulla aliquet enim tortor. Consequat mauris nunc congue nisi vitae
-			suscipit. Pulvinar mattis nunc sed blandit libero volutpat. Ut venenatis tellus in metus
-			vulputate eu scelerisque felis. Id leo in vitae turpis massa sed elementum. Nullam ac tortor
-			vitae purus faucibus. Nulla facilisi etiam dignissim diam quis enim. Dapibus ultrices in
-			iaculis nunc sed augue lacus viverra. Facilisi nullam vehicula ipsum a arcu cursus vitae
-			congue mauris.
+			I joined Catalyze as the second employee, brought on to build out the software platform from
+			scratch. Leveraging what I learned at Sungevity and my knack for figuring things out on the
+			fly, I stood up our AWS infrastructure, databases, and Python APIs. I then dove into
+			Javascript and built a front end GIS application for displaying crucial prospecting and site
+			data for our sales and design teams. I also took the lead in designing our scrum and release
+			processes, and helped hire and build out the highest functioning software team I've ever had
+			the joy of working with.
+		</p>
+	</section>
+	<section id="summary">
+		<span class="title-block">
+			<span class="icon" style="padding-bottom: 0.35rem;">⛰️</span>
+			<h3>What's next?</h3>
+		</span>
+		<p>
+			After deciding it was time to move on from Catalyze, I've taken a few months off to do some
+			much needed house projects and explore a little more of Colorado. Now I'm looking for the next
+			team to call home. I'm especially interested in the areas of climate tech and renewable
+			energy, but I'd consider any organization working to make the world a better place.
 		</p>
 	</section>
 </div>
@@ -369,15 +391,15 @@
 <style>
 	.scroller {
 		position: relative;
-		height: 10000px;
+		--scroller-height: 11000px;
+		height: var(--scroller-height);
 	}
 	.map-wrap {
 		top: var(--nav-height);
 		left: 0;
-		width: 100vw;
+		width: 100%;
 		position: sticky;
 		overflow: hidden;
-		margin-left: calc(-1 * var(--outside-margin));
 	}
 	.banner {
 		position: absolute;
@@ -400,6 +422,22 @@
 	}
 	.map {
 		height: calc(100vh - var(--nav-height));
+	}
+	.title-block {
+		display: flex;
+		align-items: center;
+		vertical-align: middle;
+		& h3 {
+			margin-left: 1rem;
+		}
+	}
+	.icon {
+		display: flex;
+		align-items: center;
+		vertical-align: middle;
+		font-size: 2rem;
+		height: 2rem;
+		width: 2rem;
 	}
 	section {
 		position: absolute;
@@ -429,5 +467,8 @@
 	}
 	section:nth-of-type(6) {
 		top: 8500px;
+	}
+	section:nth-of-type(7) {
+		top: calc(var(--scroller-height) - 100vh * 3 / 5);
 	}
 </style>

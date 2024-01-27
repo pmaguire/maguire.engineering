@@ -36,6 +36,16 @@
 </div>
 
 <style>
+	.primary {
+		padding-top: var(--nav-height);
+	}
+	main {
+		background-color: var(--background-2);
+		min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--outside-margin) * 2);
+	}
+	main:not(:has(.map-wrap)) {
+		padding: var(--outside-margin);
+	}
 	footer {
 		height: var(--footer-height);
 		display: flex;
@@ -43,14 +53,5 @@
 		background: var(--background-1);
 		align-items: center;
 		padding: 0 var(--outside-margin);
-	}
-
-	.primary {
-		padding-top: var(--nav-height);
-	}
-
-	main {
-		margin: 0 var(--outside-margin);
-		background-color: var(--background-2);
 	}
 </style>

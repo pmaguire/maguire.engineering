@@ -57,6 +57,7 @@
 
 <style>
 	header {
+		padding: 0 var(--outside-margin);
 		z-index: 2;
 		height: var(--nav-height);
 		display: flex;
@@ -65,7 +66,7 @@
 		align-items: center;
 		position: fixed;
 		top: 0;
-		width: 100%;
+		width: calc(100% - var(--outside-margin) * 2);
 	}
 
 	.buttons {
@@ -75,7 +76,6 @@
 	}
 
 	.home-link {
-		margin-left: var(--outside-margin);
 		& a {
 			font-weight: 300;
 			letter-spacing: 0.2rem;
