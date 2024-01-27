@@ -26,7 +26,7 @@
 		other things.
 	</p>
 
-	<h4>Here's my story ↓</h4>
+	<h4>Here's how I got to where I am ↓</h4>
 </section>
 
 <section>
@@ -38,6 +38,6 @@
 		font-size: 1.25rem;
 		max-width: 700px;
 		margin: 0 auto;
-		padding: var(--outside-margin);
+		padding: var(--outside-padding);
 	}
 </style>

@@ -6,7 +6,7 @@
 <header>
 	<div class="home-link">
 		<a href="/">
-			<span class="main-icon">/<span class="red">.*</span>/</span>
+			<span class="main-icon">/<span class="accent">.*</span>/</span>
 			<div class="title">
 				<span class="title-a">MAGUIRE</span><span class="title-b">.ENGINEERING</span>
 			</div>
@@ -14,8 +14,8 @@
 	</div>
 	<div class="buttons">
 		<nav>
-			<a href="/contact">Contact</a>
 			<a href="/blog">Blog</a>
+			<a href="/resume">Résumé</a>
 			<a
 				title="LinkedIn"
 				use:tooltip
@@ -62,7 +62,7 @@
 	}
 
 	header {
-		padding: 0 var(--outside-margin);
+		padding: 0 var(--outside-padding);
 		z-index: 3;
 		height: var(--nav-height);
 		display: flex;
@@ -71,7 +71,8 @@
 		align-items: center;
 		position: fixed;
 		top: 0;
-		width: calc(100% - var(--outside-margin) * 2);
+		width: calc(100% - var(--outside-padding) * 2);
+		box-shadow: 0 1px 2px 0 var(--background-4);
 	}
 
 	.buttons {
@@ -101,8 +102,8 @@
 		padding-right: 1rem;
 	}
 
-	.red {
-		color: var(--color-red);
+	.accent {
+		color: var(--color-accent-1);
 	}
 
 	nav {

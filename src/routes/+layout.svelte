@@ -41,10 +41,10 @@
 	}
 	main {
 		background-color: var(--background-2);
-		min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--outside-margin) * 2);
+		min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--outside-padding) * 2);
 	}
 	main:not(:has(.map-wrap)) {
-		padding: var(--outside-margin);
+		padding: var(--outside-padding);
 	}
 	footer {
 		height: var(--footer-height);
@@ -52,6 +52,6 @@
 		justify-content: space-between;
 		background: var(--background-1);
 		align-items: center;
-		padding: 0 var(--outside-margin);
+		padding: 0 var(--outside-padding);
 	}
 </style>

@@ -432,7 +432,10 @@
 						<a target="_blank" rel="noopener" href="https://github.com/pmaguire">Github</a>
 					</li>
 					<li>
-						<a target="_blank" rel="noopener" href="/resume">Resumé</a>
+						<a target="_blank" rel="noopener" href="/blog">Blog</a>
+					</li>
+					<li>
+						<a target="_blank" rel="noopener" href="/resume">Résumé</a>
 					</li>
 				</ul>
 			</div>
@@ -509,7 +512,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding: 1rem;
-		background: rgb(var(--background-3-rgb), 0.5);
+		background: rgb(var(--background-3-rgb), 0.75);
 		z-index: 2; /* Required to fix Safari issue */
 	}
 	@media (max-width: 800px) {

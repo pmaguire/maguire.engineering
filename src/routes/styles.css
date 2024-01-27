@@ -4,7 +4,7 @@
 :root {
 	--nav-height: 4rem;
 	--footer-height: 4rem;
-	--outside-margin: 2rem;
+	--outside-padding: 2rem;
 	--fade-style: linear;
 	--theme-transition-time: 1s;
 	--hover-transition-time: 0.15s;
@@ -18,18 +18,19 @@
 
 @media (max-width: 550px) {
 	:root {
-		--outside-margin: 1rem;
+		--outside-padding: 1rem;
 	}
 }
 
 .light-mode {
-	--background-1: rgb(245, 245, 245);
-	--background-2: rgb(230, 230, 230);
-	--background-3-rgb: 225, 225, 225;
+	--background-1: white;
+	--background-2: rgb(245, 245, 245);
+	--background-3-rgb: 215, 215, 215;
 	--background-3: rgb(--background-3-rgb);
+	--background-4: rgb(200, 200, 200);
 	--color-text: rgb(47, 47, 47);
 	--hover-color: rgb(145, 41, 41);
-	--color-red: rgb(185, 0, 0);
+	--color-accent-1: rgb(185, 0, 0);
 }
 
 .dark-mode {
@@ -37,9 +38,10 @@
 	--background-2: rgb(64, 64, 64);
 	--background-3-rgb: 92, 92, 92;
 	--background-3: rgb(--background-3-rgb);
-	--color-text: rgb(230, 230, 230);
+	--background-4: rgb(108, 108, 108);
+	--color-text: rgb(250, 250, 250);
 	--hover-color: rgb(145, 41, 41);
-	--color-red: rgb(185, 0, 0);
+	--color-accent-1: rgb(185, 0, 0);
 }
 
 body {
@@ -54,6 +56,7 @@ body {
 	transition-property: background, background-color, background-image, border;
 }
 
+h1,
 h2,
 h3,
 h4 {
