@@ -16,8 +16,8 @@
 <style>
 	div {
 		font-size: 0.8em;
-		border: 1px solid #ddd;
-		box-shadow: 1px 1px 1px #ddd;
+		border: 1px solid var(--background-2);
+		box-shadow: 1px 1px 1px var(--background-2);
 		background-color: var(--background-1);
 		border-radius: 4px;
 		padding: 4px;

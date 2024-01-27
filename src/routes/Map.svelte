@@ -172,7 +172,7 @@
 			type: 'circle',
 			source: 'POIs',
 			paint: {
-				'circle-color': '#4264fb',
+				'circle-color': '#b90000',
 				'circle-radius': 6,
 				'circle-stroke-width': 2,
 				'circle-stroke-color': '#ffffff',
@@ -412,7 +412,7 @@
 		font-size: 2rem;
 		letter-spacing: 0.7rem;
 		font-weight: 600;
-		opacity: 0.4;
+		opacity: 0.6;
 		&.top {
 			top: 1rem;
 		}

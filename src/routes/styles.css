@@ -73,3 +73,25 @@ a {
 a:hover {
 	filter: invert(35%);
 }
+
+.map-wrap {
+	& .mapboxgl-popup-content {
+		background-color: var(--background-2);
+		padding: 10px;
+		& p {
+			margin: 0;
+		}
+	}
+	& .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+		border-top-color: var(--background-2);
+	}
+	& .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+		border-bottom-color: var(--background-2);
+	}
+	& .mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+		border-right-color: var(--background-2);
+	}
+	& .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+		border-left-color: var(--background-2);
+	}
+}
