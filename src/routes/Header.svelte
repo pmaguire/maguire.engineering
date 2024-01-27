@@ -7,7 +7,7 @@
 	<div class="home-link">
 		<a href="/">
 			<span class="main-icon">/<span class="red">.*</span>/</span>
-			<div>
+			<div class="title">
 				<span class="title-a">MAGUIRE</span><span class="title-b">.ENGINEERING</span>
 			</div>
 		</a>
@@ -56,9 +56,14 @@
 </header>
 
 <style>
+	a {
+		text-decoration: none;
+		font-weight: 400;
+	}
+
 	header {
 		padding: 0 var(--outside-margin);
-		z-index: 2;
+		z-index: 3;
 		height: var(--nav-height);
 		display: flex;
 		justify-content: space-between;
@@ -91,7 +96,7 @@
 	.main-icon {
 		color: var(--color-text);
 		letter-spacing: 0.01rem;
-		font-weight: 700;
+		font-weight: 600;
 		font-size: 1.5rem;
 		padding-right: 1rem;
 	}
@@ -127,6 +132,19 @@
 		.title-b {
 			position: relative;
 			left: 0.5rem;
+		}
+	}
+	@media (max-width: 400px) {
+		.main-icon {
+			font-size: 1.25rem;
+		}
+		header {
+			font-size: 0.8rem;
+		}
+	}
+	@media (max-width: 360px) {
+		.title {
+			display: none;
 		}
 	}
 </style>

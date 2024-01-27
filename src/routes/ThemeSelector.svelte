@@ -46,7 +46,7 @@
 		width: 2.5rem;
 		height: 1rem;
 		background-color: var(--background-1);
-		z-index: 3;
+		z-index: 4;
 		position: absolute;
 		bottom: 0.25rem;
 	}

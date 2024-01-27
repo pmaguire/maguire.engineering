@@ -13,6 +13,7 @@
 		'Noto Sans Display Variable',
 		-apple-system,
 		sans-serif;
+	font-weight: 300;
 }
 
 @media (max-width: 550px) {
@@ -53,6 +54,12 @@ body {
 	transition-property: background, background-color, background-image, border;
 }
 
+h2,
+h3,
+h4 {
+	font-weight: 400;
+}
+
 button {
 	background: none;
 	color: inherit;
@@ -64,14 +71,12 @@ button {
 }
 
 a {
-	text-decoration: none;
-	font-weight: 500;
+	text-decoration-thickness: 0.5px;
 	transition: var(--hover-transition-time) linear;
 	transition-property: filter;
-}
-
-a:hover {
-	filter: invert(35%);
+	&:hover {
+		filter: invert(35%);
+	}
 }
 
 .map-wrap {

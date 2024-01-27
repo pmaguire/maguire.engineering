@@ -8,17 +8,17 @@
 	let map
 	let mapContainer, topBanner, bottomBanner
 
-	const defaultLoc = 'start'
+	const defaultLoc = 'hero'
 
 	const locations = {
-		start: {
+		hero: {
 			center: [-118.285272, 34.020508],
 			zoom: 2,
 			speed: 2,
 		},
 		'los-angeles': {
 			center: [-118.285272, 34.020508],
-			zoom: 13,
+			zoom: 11,
 			topBanner: 'Los Angeles',
 			bottomBanner: '2001 - 2005',
 			// duration: 6000,
@@ -32,27 +32,27 @@
 			speed: 2,
 		},
 		'south-sudan': {
-			center: [33.057843, 8.610288],
-			zoom: 7,
+			center: [32.540282, 9.191535],
+			zoom: 6,
 			topBanner: 'South Sudan',
 			bottomBanner: '2009',
 		},
 		haiti: {
-			center: [-72.299317, 18.554858],
-			zoom: 11,
+			center: [-72.352469, 18.534794],
+			zoom: 10,
 			topBanner: 'Haiti',
 			bottomBanner: '2010 - 2011',
 			speed: 1.5,
 		},
 		oakland: {
 			center: [-122.274398, 37.793933],
-			zoom: 13,
+			zoom: 10,
 			topBanner: 'Oakland, California',
 			bottomBanner: '2011 - 2017',
 		},
 		colorado: {
 			center: [-105.204706, 40.071132],
-			zoom: 13,
+			zoom: 9,
 			topBanner: 'Boulder, Colorado',
 			bottomBanner: '2018 - 2023',
 		},
@@ -404,20 +404,48 @@
 			<h3>What's next?</h3>
 		</span>
 		<p>
-			After deciding it was time to move on from Catalyze, I've taken a few months off to do some
-			much needed house projects and explore a little more of Colorado. Now I'm looking for the next
-			team to call home. I'm especially interested in the areas of climate tech and renewable
-			energy, but I'd consider any organization working to make the world a better place.
+			After deciding to move on from Catalyze, I've taken a few months off to do some much needed
+			house projects and explore a little more of Colorado. Now I'm looking for the next team to
+			call home. I'm especially interested in climate tech and renewable energy, but I'd consider
+			any organization working to make the world a better place.
 		</p>
-		<img
-			class="picture"
-			src="/patrick-hiking.jpg"
-			alt="Patrick on a solo hike high in the mountains"
-		/>
+		<div class="columns">
+			<div>
+				<span>Get in touch:</span>
+				<ul>
+					<p>
+						<a target="_blank" rel="noopener" href="mailto:contact@maguire.engineering"
+							>contact@maguire.engineering</a
+						>
+					</p>
+				</ul>
+			</div>
+			<div>
+				<span>Or learn more:</span>
+				<ul>
+					<li>
+						<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/patrick-maguire/"
+							>LinkedIn</a
+						>
+					</li>
+					<li>
+						<a target="_blank" rel="noopener" href="https://github.com/pmaguire">Github</a>
+					</li>
+					<li>
+						<a target="_blank" rel="noopener" href="/resume">Resumé</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 </div>
 
 <style>
+	.columns {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 1rem;
+	}
 	.scroller {
 		position: relative;
 		--scroller-height: 11000px;
@@ -482,6 +510,7 @@
 		margin-right: auto;
 		padding: 1rem;
 		background: rgb(var(--background-3-rgb), 0.5);
+		z-index: 2; /* Required to fix Safari issue */
 	}
 	@media (max-width: 800px) {
 		section {
@@ -517,6 +546,6 @@
 		top: 8500px;
 	}
 	section:nth-of-type(7) {
-		top: calc(var(--scroller-height) - 100vh * 0.8);
+		top: calc(var(--scroller-height) - 100vh * 0.75);
 	}
 </style>
