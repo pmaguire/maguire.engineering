@@ -32,8 +32,8 @@
 		grid-area: inner-span;
 		width: 1rem;
 		transition:
-			transform var(--theme-transition-time),
-			opacity var(--theme-transition-time),
+			transform var(--transition-time),
+			opacity var(--transition-time),
 			filter var(--hover-transition-time);
 		transform-origin: center bottom;
 	}

@@ -6,7 +6,7 @@
 	--footer-height: 4rem;
 	--outside-padding: 2rem;
 	--fade-style: linear;
-	--theme-transition-time: 1s;
+	--transition-time: 0.5s;
 	--hover-transition-time: 0.15s;
 	--media-query-width: 500px;
 	font-family:
@@ -14,6 +14,10 @@
 		-apple-system,
 		sans-serif;
 	font-weight: 300;
+	--transtion-std: background var(--transition-time) var(--fade-style),
+		background-color var(--transition-time) var(--fade-style),
+		background-image var(--transition-time) var(--fade-style),
+		border var(--transition-time) var(--fade-style);
 }
 
 @media (max-width: 550px) {
@@ -31,6 +35,7 @@
 	--color-text: rgb(47, 47, 47);
 	--hover-color: rgb(145, 41, 41);
 	--color-accent-1: rgb(185, 0, 0);
+	--header-footer-border: 0.5px solid var(--background-4);
 }
 
 .dark-mode {
@@ -42,6 +47,7 @@
 	--color-text: rgb(250, 250, 250);
 	--hover-color: rgb(145, 41, 41);
 	--color-accent-1: rgb(185, 0, 0);
+	--header-footer-border: none;
 }
 
 body {
@@ -52,8 +58,6 @@ body {
 
 * {
 	color: var(--color-text);
-	transition: var(--theme-transition-time) var(--fade-style);
-	transition-property: background, background-color, background-image, border;
 }
 
 h1,

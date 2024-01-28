@@ -1,5 +1,6 @@
 <script>
 	import Header from './Header.svelte'
+	import Footer from './Footer.svelte'
 	import { theme } from '$lib/stores/theme'
 	import './styles.css'
 	import { browser } from '$app/environment'
@@ -23,16 +24,7 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>
-			Designed & Built by Patrick Maguire with ♥️ and <a
-				target="_blank"
-				rel="noopener"
-				href="https://kit.svelte.dev/">SvelteKit</a
-			>
-			• © 2023 - {new Date().getFullYear()}
-		</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
@@ -42,16 +34,9 @@
 	main {
 		background-color: var(--background-2);
 		min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--outside-padding) * 2);
+		transition: var(--transtion-std);
 	}
 	main:not(:has(.map-wrap)) {
 		padding: var(--outside-padding);
-	}
-	footer {
-		height: var(--footer-height);
-		display: flex;
-		justify-content: space-between;
-		background: var(--background-1);
-		align-items: center;
-		padding: 0 var(--outside-padding);
 	}
 </style>
