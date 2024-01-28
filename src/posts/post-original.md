@@ -1,6 +1,6 @@
 ---
 title: Post One
-date: '2021-12-14'
+order: 1
 ---
 
 Hello, I am _Post One._

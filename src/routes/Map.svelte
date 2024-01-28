@@ -21,7 +21,6 @@
 			zoom: 11,
 			topBanner: 'Los Angeles',
 			bottomBanner: '2001 - 2005',
-			// duration: 6000,
 			speed: 2,
 		},
 		tanzania: {
@@ -244,8 +243,10 @@
 
 			document.getElementById(location).classList.add('active')
 			document.getElementById(activeLocation)?.classList.remove('active')
-			topBanner.innerHTML = locations[location].topBanner || ''
-			bottomBanner.innerHTML = locations[location].bottomBanner || ''
+			if (topBanner && bottomBanner) {
+				topBanner.innerHTML = locations[location].topBanner || ''
+				bottomBanner.innerHTML = locations[location].bottomBanner || ''
+			}
 
 			activeLocation = location
 		}
@@ -411,17 +412,15 @@
 		</p>
 		<div class="columns">
 			<div>
-				<span>Get in touch:</span>
-				<ul>
-					<p>
-						<a target="_blank" rel="noopener" href="mailto:contact@maguire.engineering"
-							>contact@maguire.engineering</a
-						>
-					</p>
-				</ul>
+				<strong>Get in touch</strong>
+				<p>
+					<a target="_blank" rel="noopener" href="mailto:contact@maguire.engineering"
+						>contact@maguire.engineering</a
+					>
+				</p>
 			</div>
 			<div>
-				<span>Or learn more:</span>
+				<strong>Learn more</strong>
 				<ul>
 					<li>
 						<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/patrick-maguire/"
@@ -432,10 +431,7 @@
 						<a target="_blank" rel="noopener" href="https://github.com/pmaguire">Github</a>
 					</li>
 					<li>
-						<a target="_blank" rel="noopener" href="/blog">Blog</a>
-					</li>
-					<li>
-						<a target="_blank" rel="noopener" href="/resume">Résumé</a>
+						<a href="/blog">Blog</a>
 					</li>
 				</ul>
 			</div>
@@ -472,7 +468,7 @@
 		font-size: 2rem;
 		letter-spacing: 0.7rem;
 		font-weight: 600;
-		opacity: 0.6;
+		opacity: 0.5;
 		&.top {
 			top: 1rem;
 		}

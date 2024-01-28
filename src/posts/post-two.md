@@ -1,6 +1,6 @@
 ---
 title: Post Two
-date: '2021-12-31'
+order: 2
 ---
 
 Hello, I am _Post Two._

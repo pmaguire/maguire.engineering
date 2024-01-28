@@ -2,8 +2,13 @@
 	export let data
 </script>
 
-<h1>Blog</h1>
+<svelte:head>
+	<title>blog | maguire.engineering</title>
+	<meta name="Description" content="Maguire Engineering Blog" />
+</svelte:head>
 
+<h1>Blog</h1>
+<p>A mix of spicy and extremely mundane takes on building software, among other things.</p>
 <ul>
 	{#each data.posts as post}
 		<li>
@@ -12,7 +17,12 @@
 					{post.meta.title}
 				</a>
 			</h2>
-			Published {post.meta.date}
 		</li>
 	{/each}
 </ul>
+
+<style>
+	h1 {
+		font-size: 1.5rem;
+	}
+</style>

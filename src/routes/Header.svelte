@@ -15,7 +15,6 @@
 	<div class="buttons">
 		<nav>
 			<a href="/blog">Blog</a>
-			<a href="/resume">Résumé</a>
 			<a
 				title="LinkedIn"
 				use:tooltip

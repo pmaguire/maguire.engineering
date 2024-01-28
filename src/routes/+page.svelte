@@ -8,8 +8,8 @@
 </svelte:head>
 
 <section class="hero" id="hero">
-	<h3>Hey, I'm Patrick.</h3>
-	<h2>I solve problems and build things.</h2>
+	<span class="lead">Hey, I'm Patrick.</span>
+	<h1>I solve problems and build things.</h1>
 	<p>I'm a full stack Javascript and Python dev with expertise in AWS and GIS.</p>
 	<p>
 		I've built hospitals, battled disease outbreaks, taught physics, and designed and installed
@@ -21,9 +21,9 @@
 		member software organization.
 	</p>
 	<p>
-		Most recently, I was a lead software developer at a renewable energy startup, where I
-		architected and built our APIs, AWS infrastructure, and a front end GIS application, among many
-		other things.
+		Most recently, I was a lead software developer and team lead at a renewable energy startup,
+		where I architected and built our APIs, AWS infrastructure, and a front end GIS application,
+		among many other things.
 	</p>
 
 	<h4>Here's how I got to where I am ↓</h4>
@@ -34,6 +34,13 @@
 </section>
 
 <style>
+	h1 {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+	.lead {
+		font-size: 1.75rem;
+	}
 	.hero {
 		font-size: 1.25rem;
 		max-width: 700px;
