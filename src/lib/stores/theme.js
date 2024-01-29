@@ -1,6 +1,10 @@
 import { persisted } from 'svelte-persisted-store'
+import { browser } from '$app/environment'
 
-export const theme = persisted(
-	'theme',
-	window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
-)
+let themeSelection = 'dark'
+
+if (browser) {
+	themeSelection = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+export const theme = persisted('theme', themeSelection)
