@@ -1,6 +1,11 @@
 import Tooltip from './Tooltip.svelte'
 
 export default function tooltip(element: HTMLElement) {
+	// Disable on touch devices
+	if (window.matchMedia('(hover: none)').matches) {
+		return
+	}
+
 	let title = element.getAttribute('title') || undefined
 	let cmp: Tooltip
 

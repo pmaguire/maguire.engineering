@@ -79,6 +79,7 @@ body {
 	padding: 0;
 	background: var(--background-2);
 	transition: var(--transition-std);
+	overflow-y: scroll;
 }
 
 * {
