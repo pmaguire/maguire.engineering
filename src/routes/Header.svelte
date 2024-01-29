@@ -121,14 +121,10 @@
 
 	@media (max-width: 550px) {
 		.home-link a {
-			letter-spacing: 0.1rem;
 			position: relative;
 		}
 		.home-link span {
 			display: flex;
-		}
-		nav a {
-			padding: 0 0.2rem;
 		}
 		.title-b {
 			position: relative;
@@ -136,14 +132,6 @@
 		}
 	}
 	@media (max-width: 400px) {
-		.main-icon {
-			font-size: 1.25rem;
-		}
-		header {
-			font-size: 0.8rem;
-		}
-	}
-	@media (max-width: 360px) {
 		.title {
 			display: none;
 		}
