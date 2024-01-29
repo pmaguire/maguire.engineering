@@ -72,7 +72,7 @@
 		top: 0;
 		width: calc(100% - var(--outside-padding) * 2);
 		border-bottom: var(--header-footer-border);
-		transition: var(--transtion-std);
+		transition: var(--transition-std);
 	}
 
 	.buttons {

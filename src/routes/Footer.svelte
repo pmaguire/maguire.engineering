@@ -11,7 +11,7 @@
 
 <style>
 	footer {
-		transition: var(--transtion-std);
+		transition: var(--transition-std);
 		border-top: var(--header-footer-border);
 		height: var(--footer-height);
 		display: flex;

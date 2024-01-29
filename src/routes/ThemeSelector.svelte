@@ -49,6 +49,7 @@
 		z-index: 4;
 		position: absolute;
 		bottom: 0.25rem;
+		transition: var(--transition-std);
 	}
 
 	.sun.light,

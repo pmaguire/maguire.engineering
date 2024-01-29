@@ -1,4 +1,5 @@
 <script>
+	import { onNavigate } from '$app/navigation'
 	import Header from './Header.svelte'
 	import Footer from './Footer.svelte'
 	import { theme } from '$lib/stores/theme'
@@ -15,6 +16,17 @@
 
 	theme.subscribe(() => setMode())
 	setMode()
+
+	// Basic view transition. Should only work in chromium at this point.
+	onNavigate(navigation => {
+		if (!document.startViewTransition) return
+		return new Promise(resolve => {
+			document.startViewTransition(async () => {
+				resolve()
+				await navigation.complete
+			})
+		})
+	})
 </script>
 
 <div class="primary">
@@ -34,7 +46,7 @@
 	main {
 		background-color: var(--background-2);
 		min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--outside-padding) * 2);
-		transition: var(--transtion-std);
+		transition: var(--transition-std);
 	}
 	main:not(:has(.map-wrap)) {
 		max-width: 800px;

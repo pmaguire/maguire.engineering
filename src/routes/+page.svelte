@@ -10,7 +10,7 @@
 <section class="hero" id="hero">
 	<span class="lead">Hey, I'm Patrick.</span>
 	<h1>I solve problems and build things.</h1>
-	<p>I'm a full stack Javascript and Python dev with expertise in AWS and GIS.</p>
+	<p>I'm a full stack Javascript and Python dev with AWS and GIS expertise.</p>
 	<p>
 		I've built hospitals, battled disease outbreaks, taught physics, and designed and installed
 		solar PV systems.
@@ -22,11 +22,11 @@
 	</p>
 	<p>
 		Most recently, I was a lead software developer and team lead at a renewable energy startup,
-		where I architected and built our APIs, AWS infrastructure, and a front end GIS application,
+		where I architected and built out our APIs, AWS infrastructure, and a front end GIS application,
 		among many other things.
 	</p>
 
-	<h4>Here's how I got to where I am ↓</h4>
+	<h4>Here's the story of my career, starting with college ↓</h4>
 </section>
 
 <section>

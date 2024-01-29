@@ -14,7 +14,7 @@
 		-apple-system,
 		sans-serif;
 	font-weight: 300;
-	--transtion-std: background var(--transition-time) var(--fade-style),
+	--transition-std: background var(--transition-time) var(--fade-style),
 		background-color var(--transition-time) var(--fade-style),
 		background-image var(--transition-time) var(--fade-style),
 		border var(--transition-time) var(--fade-style);
@@ -58,6 +58,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background: var(--background-2);
+	transition: var(--transition-std);
 }
 
 * {

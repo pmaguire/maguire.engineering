@@ -1,5 +1,6 @@
 <script>
 	import { onMount, onDestroy } from 'svelte'
+	import { fade } from 'svelte/transition'
 	import { Map, Popup } from 'mapbox-gl'
 	import 'mapbox-gl/dist/mapbox-gl.css'
 	import { theme } from '$lib/stores/theme'
@@ -194,8 +195,8 @@
 			interactive: false,
 		})
 
-		topBanner.innerHTML = locations[defaultLoc].topBanner || ''
-		bottomBanner.innerHTML = locations[defaultLoc].bottomBanner || ''
+		topBanner = locations[defaultLoc].topBanner || ''
+		bottomBanner = locations[defaultLoc].bottomBanner || ''
 
 		map.on(['style.load'], function () {
 			addPoisLayer()
@@ -243,10 +244,8 @@
 
 			document.getElementById(location).classList.add('active')
 			document.getElementById(activeLocation)?.classList.remove('active')
-			if (topBanner && bottomBanner) {
-				topBanner.innerHTML = locations[location].topBanner || ''
-				bottomBanner.innerHTML = locations[location].bottomBanner || ''
-			}
+			topBanner = locations[location].topBanner || ''
+			bottomBanner = locations[location].bottomBanner || ''
 
 			activeLocation = location
 		}
@@ -291,8 +290,20 @@
 <div class="scroller">
 	<div class="map-wrap">
 		<div class="banners">
-			<span class="banner top" bind:this={topBanner} />
-			<span class="banner bottom" bind:this={bottomBanner} />
+			{#key topBanner}
+				<span
+					in:fade={{ duration: 200, delay: 200 }}
+					out:fade={{ duration: 200 }}
+					class="banner top">{topBanner}</span
+				>
+			{/key}
+			{#key bottomBanner}
+				<span
+					in:fade={{ duration: 200, delay: 200 }}
+					out:fade={{ duration: 200 }}
+					class="banner bottom">{bottomBanner}</span
+				>
+			{/key}
 		</div>
 		<div class="map" bind:this={mapContainer} />
 	</div>
@@ -447,7 +458,9 @@
 	}
 	.scroller {
 		position: relative;
-		--scroller-height: 11000px;
+		--scroller-base-height: 700px;
+		--scroller-section-height: 1800px;
+		--scroller-height: calc(var(--scroller-base-height) * 2 + var(--scroller-section-height) * 6);
 		height: var(--scroller-height);
 	}
 	.map-wrap {
@@ -527,22 +540,22 @@
 		}
 	}
 	section:nth-of-type(1) {
-		top: 1000px;
+		top: var(--scroller-base-height);
 	}
 	section:nth-of-type(2) {
-		top: 2500px;
+		top: calc(var(--scroller-base-height) + var(--scroller-section-height));
 	}
 	section:nth-of-type(3) {
-		top: 4000px;
+		top: calc(var(--scroller-base-height) + var(--scroller-section-height) * 2);
 	}
 	section:nth-of-type(4) {
-		top: 5500px;
+		top: calc(var(--scroller-base-height) + var(--scroller-section-height) * 3);
 	}
 	section:nth-of-type(5) {
-		top: 7000px;
+		top: calc(var(--scroller-base-height) + var(--scroller-section-height) * 4);
 	}
 	section:nth-of-type(6) {
-		top: 8500px;
+		top: calc(var(--scroller-base-height) + var(--scroller-section-height) * 5);
 	}
 	section:nth-of-type(7) {
 		top: calc(var(--scroller-height) - 100vh * 0.75);
