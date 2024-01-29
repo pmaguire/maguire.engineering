@@ -33,7 +33,7 @@
 		width: 1rem;
 		transition:
 			transform var(--transition-time),
-			opacity calc(var(--transition-time) / 2),
+			opacity var(--transition-time),
 			filter var(--hover-transition-time);
 		transform-origin: center bottom;
 	}
@@ -43,7 +43,7 @@
 	}
 
 	.horizon {
-		width: 3.5rem;
+		width: 6rem;
 		height: 1.25rem;
 		background-color: var(--background-1);
 		z-index: 4;
