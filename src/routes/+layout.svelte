@@ -45,7 +45,10 @@
 	}
 	main {
 		background-color: var(--background-2);
-		min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--outside-padding) * 2);
+		min-height: calc(
+			100vh - var(--nav-height) - var(--footer-height) - var(--nav-borders-height) -
+				var(--outside-padding) * 2
+		);
 		transition: var(--transition-std);
 	}
 	main:not(:has(.map-wrap)) {

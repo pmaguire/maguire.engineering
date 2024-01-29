@@ -40,6 +40,7 @@ strong {
 	--hover-color: rgb(145, 41, 41);
 	--color-accent-1: rgb(185, 0, 0);
 	--header-footer-border: 0.5px solid var(--background-4);
+	--nav-borders-height: 1px;
 }
 
 .dark-mode {
@@ -52,6 +53,7 @@ strong {
 	--hover-color: rgb(145, 41, 41);
 	--color-accent-1: rgb(185, 0, 0);
 	--header-footer-border: none;
+	--nav-borders-height: 0px;
 }
 
 body {
