@@ -1,7 +1,6 @@
 import Tooltip from './Tooltip.svelte'
 
 export default function tooltip(element: HTMLElement) {
-	// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
 	let title = element.getAttribute('title') || undefined
 	let cmp: Tooltip
 

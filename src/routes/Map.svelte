@@ -7,7 +7,9 @@
 	import { PUBLIC_MAPBOX_ACCESS_TOKEN } from '$env/static/public'
 
 	let map
-	let mapContainer, topBanner, bottomBanner
+	let mapContainer,
+		topBanner = '',
+		bottomBanner = ''
 
 	const defaultLoc = 'hero'
 
