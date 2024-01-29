@@ -43,7 +43,7 @@
 	}
 
 	.horizon {
-		width: 2.5rem;
+		width: 3.5rem;
 		height: 1.25rem;
 		background-color: var(--background-1);
 		z-index: 4;
