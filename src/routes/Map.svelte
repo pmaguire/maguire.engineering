@@ -311,7 +311,11 @@
 	</div>
 	<section id="los-angeles" class="active">
 		<span class="title-block">
-			<img class="icon" src="/usc-logo.svg" alt="Seal for the University of Southern California" />
+			<img
+				class="icon"
+				src="/images/usc-logo.svg"
+				alt="Seal for the University of Southern California"
+			/>
 			<h3>University of Southern California</h3>
 		</span>
 		<p>
@@ -324,13 +328,13 @@
 		</p>
 		<img
 			class="picture"
-			src="/usc-welding.jpg"
+			src="/images/usc-welding.jpg"
 			alt="Patrick Maguire welding some metal together at USC"
 		/>
 	</section>
 	<section id="tanzania">
 		<span class="title-block">
-			<img class="icon" src="/peace-corps-logo.svg" alt="Peace Corps circular logo" />
+			<img class="icon" src="/images/peace-corps-logo.svg" alt="Peace Corps circular logo" />
 			<h3>Peace Corps</h3>
 		</span>
 		<p>
@@ -339,11 +343,19 @@
 			engineering education however, and coordinated a few construction projects including water
 			supply for the dormitories and rehabilitation of some teacher housing.
 		</p>
-		<img class="picture" src="/peace-corps-windpump.jpg" alt="Repairing a windpump in Tanzania" />
+		<img
+			class="picture"
+			src="/images/peace-corps-windpump.jpg"
+			alt="Repairing a windpump in Tanzania"
+		/>
 	</section>
 	<section id="south-sudan">
 		<span class="title-block">
-			<img class="icon" src="/msf-logo.png" alt="Doctors Without Borders running person logo" />
+			<img
+				class="icon"
+				src="/images/msf-logo.png"
+				alt="Doctors Without Borders running person logo"
+			/>
 			<h3>Doctors Without Borders - South Sudan</h3>
 		</span>
 		<p>
@@ -354,11 +366,15 @@
 			both technical and managerial roles. I spent the last month as part of an outbreak response
 			team, investigating and treating victims of a visceral leishmaniasis (Kala Azar) outbreak.
 		</p>
-		<img class="picture" src="/msf-rom-leaving.jpg" alt="Walking to the airstrip in Rom" />
+		<img class="picture" src="/images/msf-rom-leaving.jpg" alt="Walking to the airstrip in Rom" />
 	</section>
 	<section id="haiti">
 		<span class="title-block">
-			<img class="icon" src="/msf-logo.png" alt="Doctors Without Borders running person logo" />
+			<img
+				class="icon"
+				src="/images/msf-logo.png"
+				alt="Doctors Without Borders running person logo"
+			/>
 			<h3>Doctors Without Borders - Haiti</h3>
 		</span>
 		<p>
@@ -371,13 +387,13 @@
 		</p>
 		<img
 			class="picture"
-			src="/msf-haiti-construction.jpg"
+			src="/images/msf-haiti-construction.jpg"
 			alt="A hospital under construction in Haiti"
 		/>
 	</section>
 	<section id="oakland">
 		<span class="title-block">
-			<img class="icon" src="/sungevity-logo.png" alt="Sungevity Sfunstar logo" />
+			<img class="icon" src="/images/sungevity-logo.png" alt="Sungevity Sfunstar logo" />
 			<h3>Sungevity</h3>
 		</span>
 		<p>
@@ -392,13 +408,13 @@
 		</p>
 		<img
 			class="picture"
-			src="/sungevity-solar-install.jpg"
+			src="/images/sungevity-solar-install.jpg"
 			alt="Patrick doing a volunteer solar install with Sungevity"
 		/>
 	</section>
 	<section id="colorado">
 		<span class="title-block">
-			<img class="icon" src="/catalyze-logo.png" alt="Catalyze basic logo" />
+			<img class="icon" src="/images/catalyze-logo.png" alt="Catalyze basic logo" />
 			<h3>Catalyze</h3>
 		</span>
 		<p>
@@ -410,7 +426,11 @@
 			processes, and helped hire and build out the highest functioning software team I've ever had
 			the joy of working with.
 		</p>
-		<img class="picture" src="/catalyze-team-hike.jpg" alt="The Catalyze software team on a hike" />
+		<img
+			class="picture"
+			src="/images/catalyze-team-hike.jpg"
+			alt="The Catalyze software team on a hike"
+		/>
 	</section>
 	<section id="summary">
 		<span class="title-block">
