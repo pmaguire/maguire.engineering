@@ -1,6 +1,9 @@
 <script>
+	import { onMount } from 'svelte'
 	import { theme } from '$lib/stores/theme'
 	import tooltip from '$lib/tooltip'
+
+	let loaded = false
 
 	let moonRotation = $theme === 'light' ? 0 : 180
 	let sunRotation = $theme === 'light' ? 180 : 0
@@ -10,11 +13,17 @@
 		moonRotation += 180
 		sunRotation += 180
 	}
+
+	onMount(() => {
+		loaded = true
+	})
 </script>
 
 <button on:click={click} title="Enable {$theme === 'light' ? 'dark' : 'light'} mode" use:tooltip>
-	<span class="sun {$theme}" style="transform: rotate({sunRotation}deg)">🌞</span>
-	<span class="moon {$theme}" style="transform: rotate({moonRotation}deg)">🌒</span>
+	{#if loaded}
+		<span class="sun {$theme}" style="transform: rotate({sunRotation}deg)">🌞</span>
+		<span class="moon {$theme}" style="transform: rotate({moonRotation}deg)">🌒</span>
+	{/if}
 	<div class="horizon" />
 </button>
 

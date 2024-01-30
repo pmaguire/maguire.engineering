@@ -1,5 +1,3 @@
-export const ssr = false
-
 export const load = async () => {
 	const allPosts = await fetchMarkdownPosts()
 
