@@ -52,12 +52,13 @@
 	}
 
 	.horizon {
-		width: 6rem;
+		width: 4.5rem;
 		height: 1.25rem;
 		background-color: var(--background-1);
 		z-index: 4;
 		position: absolute;
 		bottom: 0;
+		right: 0;
 		transition: var(--transition-std);
 	}
 
