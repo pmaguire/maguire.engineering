@@ -443,9 +443,9 @@
 					<li>
 						<a target="_blank" rel="noopener" href="https://github.com/pmaguire">Github</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="/blog">Blog</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
