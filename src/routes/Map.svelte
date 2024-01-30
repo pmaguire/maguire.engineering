@@ -319,12 +319,12 @@
 			<h3>University of Southern California</h3>
 		</span>
 		<p>
-			I studied Civil Engineering, with an emphasis in Building Science & Architecture. I took a few
-			programming courses on the side, and mildly regretted not choosing Computer Science as my
-			major. I found I deeply enjoyed any extracurriculars involving building things with my hands,
-			and got pretty good at metalworking and welding as a result. After a few summer internships I
-			found I didn't love the options Civil Engineering was giving me, so after graduation I headed
-			to Tanzania as a Peace Corps volunteer.
+			I joined USC straight out of high school to study Civil Engineering. I took a few programming
+			courses on the side, and mildly regretted not choosing Computer Science as my major. I found I
+			deeply enjoyed any extracurriculars involving building things with my hands, and got pretty
+			good at metalworking and welding as a result. After a few summer internships I found I didn't
+			love the options Civil Engineering was giving me, so after graduation I headed to Tanzania as
+			a Peace Corps Volunteer.
 		</p>
 		<img
 			class="picture"
@@ -359,12 +359,12 @@
 			<h3>Doctors Without Borders - South Sudan</h3>
 		</span>
 		<p>
-			Between my Peace Corps experience and engineering background, I just managed to qualify for
-			Doctors Without Borders (aka Médecins Sans Frontières), and spent 10 months in South Sudan as
-			a Technical Logistician at a remote hospital. I've never had as challenging or rewarding of a
-			job in my life, and I learned an incredible amount while being responsible for a huge range of
-			both technical and managerial roles. I spent the last month as part of an outbreak response
-			team, investigating and treating victims of a visceral leishmaniasis (Kala Azar) outbreak.
+			After the Peace Corps, I joined Doctors Without Borders (Médecins Sans Frontières), and spent
+			10 months in South Sudan as a Technical Logistician at a remote hospital. I've never had as
+			challenging or rewarding of a job in my life, and I learned an incredible amount while being
+			responsible for a huge range of both technical and managerial roles. I spent the last month as
+			part of an outbreak response team, investigating and treating victims of a visceral
+			leishmaniasis (Kala Azar) outbreak.
 		</p>
 		<img class="picture" src="/images/msf-rom-leaving.jpg" alt="Walking to the airstrip in Rom" />
 	</section>
@@ -378,12 +378,13 @@
 			<h3>Doctors Without Borders - Haiti</h3>
 		</span>
 		<p>
-			After a devastating earthquake hit Haiti in early 2010, I joined MSF's emergency response,
-			this time focusing on the construction and management side of things. For the first month, I
-			helped build and run a medical clinic in one of the largest tent encampments in
-			Port-au-Prince. I then transitioned to coordinating the construction of a replacement 120 bed
-			emergency obstetrics hospital. I spent the last 6 months of my 13 month stay building and
-			operating cholera treatment centers, as we transitioned to fighting the outbreak.
+			After a devastating earthquake hit Haiti in early 2010, I joined Doctors Without Borders'
+			emergency response, this time focusing on the construction and management side of things. For
+			the first month, I helped build and run a medical clinic in one of the largest tent
+			encampments in Port-au-Prince. I then transitioned to coordinating the construction of a
+			replacement 120 bed emergency obstetrics hospital. I spent the last 6 months of my 13 month
+			stay building and operating cholera treatment centers, as we transitioned to fighting the
+			outbreak.
 		</p>
 		<img
 			class="picture"
@@ -397,9 +398,9 @@
 			<h3>Sungevity</h3>
 		</span>
 		<p>
-			After spending most of my 20s out of the country, I was ready to stay in one place and find a
-			more traditional line of work. My experiences in MSF had introduced me to various forms of
-			renewable energy, and I decided to join the booming residential solar industry. I joined
+			After spending most of my 20's out of the country, I was ready to stay in one place and find a
+			more traditional line of work. My international experiences had introduced me to various forms
+			of renewable energy, and I decided to join the booming residential solar industry. I joined
 			Sungevity as an entry level solar designer, but quickly transferred to the software team,
 			utilizing my management, organization, and learn as I go skills to climb to the position of
 			Director of Quality Assurance within 4 years. After trying out management for a year, I
@@ -421,7 +422,7 @@
 			I joined Catalyze as the second employee, brought on to build out the software platform from
 			scratch. Leveraging what I learned at Sungevity and my knack for figuring things out on the
 			fly, I stood up our AWS infrastructure, databases, and Python APIs. I then dove into
-			Javascript and built a front end GIS application for displaying crucial prospecting and site
+			Javascript and built front end GIS applications for displaying crucial prospecting and site
 			data for our sales and design teams. I also took the lead in designing our scrum and release
 			processes, and helped hire and build out the highest functioning software team I've ever had
 			the joy of working with.
@@ -454,19 +455,13 @@
 			</div>
 			<div>
 				<strong>Learn more</strong>
-				<ul>
-					<li>
-						<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/patrick-maguire/"
-							>LinkedIn</a
-						>
-					</li>
-					<li>
-						<a target="_blank" rel="noopener" href="https://github.com/pmaguire">Github</a>
-					</li>
-					<!-- <li>
-						<a href="/blog">Blog</a>
-					</li> -->
-				</ul>
+				<p>
+					<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/patrick-maguire/"
+						>LinkedIn</a
+					>
+					|
+					<a target="_blank" rel="noopener" href="https://github.com/pmaguire">Github</a>
+				</p>
 			</div>
 		</div>
 	</section>
@@ -480,7 +475,7 @@
 	}
 	.scroller {
 		position: relative;
-		--scroller-base-height: 700px;
+		--scroller-base-height: 400px;
 		--scroller-section-height: 1800px;
 		--scroller-height: calc(var(--scroller-base-height) * 2 + var(--scroller-section-height) * 6);
 		height: var(--scroller-height);

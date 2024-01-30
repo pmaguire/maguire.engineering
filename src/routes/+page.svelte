@@ -17,11 +17,11 @@
 	</p>
 	<p>
 		Most recently, I was a lead software developer and team lead at a renewable energy startup,
-		where I architected and built out our APIs, AWS infrastructure, and a front end GIS application,
-		among many other things.
+		where I architected and built out our APIs, AWS infrastructure, and GIS applications, among many
+		other things.
 	</p>
 
-	<h4>Here's the story of my career, starting with college ↓</h4>
+	<h4>Here's my story ↓</h4>
 </section>
 
 <section>
