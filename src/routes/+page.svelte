@@ -2,18 +2,6 @@
 	import Map from './Map.svelte'
 </script>
 
-<svelte:head>
-	<title>Maguire Engineering • Full Stack Software Development</title>
-	<meta name="Description" content="Full Stack Software Development" />
-	<meta name="theme-color" content="#000000" />
-	<link rel="canonical" href="https://maguire.engineering" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Maguire Engineering • Full Stack Software Development" />
-	<meta property="og:description" content="Full Stack Software Development" />
-	<meta property="og:url" content="https://maguire.engineering" />
-	<meta property="og:image" name="image" content="https://maguire.engineering/favicon.png" />
-</svelte:head>
-
 <section class="hero" id="hero">
 	<span class="lead">Hey, I'm Patrick.</span>
 	<h1>I solve problems and build things.</h1>
