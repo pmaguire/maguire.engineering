@@ -3,8 +3,11 @@
 </script>
 
 <svelte:head>
-	<title>blog | maguire.engineering</title>
-	<meta name="Description" content="Maguire Engineering Blog" />
+	<title>Blog • Maguire Engineering</title>
+	<meta
+		name="Description"
+		content="Thoughts and rants about software development, among other things"
+	/>
 </svelte:head>
 
 <h1>Blog</h1>

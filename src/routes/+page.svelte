@@ -3,8 +3,15 @@
 </script>
 
 <svelte:head>
-	<title>maguire.engineering</title>
-	<meta name="Description" content="Maguire Engineering" />
+	<title>Maguire Engineering • Full Stack Software Development</title>
+	<meta name="Description" content="Full Stack Software Development" />
+	<meta name="image" property="og:image" content="/favicon.png" />
+	<meta name="theme-color" content="#000000" />
+	<link rel="canonical" href="https://maguire.engineering" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Maguire Engineering • Full Stack Software Development" />
+	<meta property="og:description" content="Full Stack Software Development" />
+	<meta property="og:url" content="https://maguire.engineering" />
 </svelte:head>
 
 <section class="hero" id="hero">
