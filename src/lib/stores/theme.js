@@ -4,7 +4,7 @@ import { browser } from '$app/environment'
 let themeSelection = 'dark'
 
 if (browser) {
-	themeSelection = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	themeSelection = document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light'
 }
 
 export const theme = persisted('theme', themeSelection)

@@ -6,16 +6,23 @@
 	import './styles.css'
 	import { browser } from '$app/environment'
 
-	function setMode() {
+	function setThemeMode() {
 		if (browser) {
-			document.body.classList.remove('light-mode')
-			document.body.classList.remove('dark-mode')
-			document.body.classList.add(`${$theme}-mode`)
+			const currentMode = document.documentElement.classList.contains('light-mode')
+				? 'light'
+				: 'dark'
+			if (currentMode !== $theme) {
+				if (currentMode === 'light') {
+					document.documentElement.classList.remove('light-mode')
+				} else if (currentMode === 'dark') {
+					document.documentElement.classList.remove('dark-mode')
+				}
+				document.documentElement.classList.add(`${$theme}-mode`)
+			}
 		}
 	}
 
-	theme.subscribe(() => setMode())
-	setMode()
+	theme.subscribe(() => setThemeMode())
 
 	// Basic view transition. Should only work in chromium at this point.
 	onNavigate(navigation => {

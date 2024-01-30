@@ -33,7 +33,7 @@
 		width: 1rem;
 		transition:
 			transform var(--transition-time),
-			opacity var(--transition-time),
+			opacity calc(var(--transition-time) / 2),
 			filter var(--hover-transition-time);
 		transform-origin: center bottom;
 	}
