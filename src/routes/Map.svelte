@@ -172,19 +172,23 @@
 	}
 
 	function addPoisLayer() {
-		map.addSource('POIs', POIs)
+		if (!map.getSource('POIs')) {
+			map.addSource('POIs', POIs)
+		}
 
-		map.addLayer({
-			id: 'POIs',
-			type: 'circle',
-			source: 'POIs',
-			paint: {
-				'circle-color': '#b90000',
-				'circle-radius': 6,
-				'circle-stroke-width': 2,
-				'circle-stroke-color': '#ffffff',
-			},
-		})
+		if (!map.getLayer('POIs')) {
+			map.addLayer({
+				id: 'POIs',
+				type: 'circle',
+				source: 'POIs',
+				paint: {
+					'circle-color': '#b90000',
+					'circle-radius': 6,
+					'circle-stroke-width': 2,
+					'circle-stroke-color': '#ffffff',
+				},
+			})
+		}
 	}
 
 	onMount(async () => {
