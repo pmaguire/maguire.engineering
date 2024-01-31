@@ -89,9 +89,6 @@
 			align-items: center;
 			vertical-align: middle;
 		}
-		& svg {
-			padding-right: 1rem;
-		}
 	}
 
 	.main-icon {
