@@ -510,7 +510,7 @@
 		}
 	}
 	.map {
-		height: calc(100vh - var(--nav-height));
+		height: var(--map-height);
 	}
 	.title-block {
 		display: flex;
