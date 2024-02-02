@@ -1,5 +1,7 @@
 /* Font source: https://fontsource.org/fonts/noto-sans-display/ */
 
+@import url('mapbox-gl/dist/mapbox-gl.css');
+
 @font-face {
 	font-family: 'Noto Sans Display Variable';
 	font-style: normal;

@@ -2,7 +2,6 @@
 	import { onMount, onDestroy } from 'svelte'
 	import { fade } from 'svelte/transition'
 	import { Map, Popup } from 'mapbox-gl'
-	import 'mapbox-gl/dist/mapbox-gl.css'
 	import { theme } from '$lib/stores/theme'
 	import { PUBLIC_MAPBOX_ACCESS_TOKEN } from '$env/static/public'
 
