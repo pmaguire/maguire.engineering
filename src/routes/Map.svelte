@@ -212,6 +212,7 @@
 		})
 
 		await map.once('load')
+		map.resize()
 		addPoisLayer()
 		spinGlobe()
 
