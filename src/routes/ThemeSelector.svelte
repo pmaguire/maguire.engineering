@@ -29,22 +29,19 @@
 
 <style>
 	button {
-		vertical-align: middle;
-		width: 2rem;
-		height: 2rem;
+		width: 1.75rem;
 		display: inline-grid;
-		place-items: center;
-		grid-template-areas: 'inner-span';
+		margin-left: 0.5rem;
 	}
 
 	span {
 		grid-area: inner-span;
-		width: 1rem;
 		transition:
 			transform var(--transition-time),
 			opacity calc(var(--transition-time) / 2),
 			filter var(--hover-transition-time);
 		transform-origin: center bottom;
+		font-size: 1.75rem;
 	}
 
 	span:hover {
@@ -52,8 +49,8 @@
 	}
 
 	.horizon {
-		width: 4.5rem;
-		height: 1.25rem;
+		width: 6rem;
+		height: 0.75rem;
 		background-color: var(--background-1);
 		z-index: 4;
 		position: absolute;

@@ -24,7 +24,7 @@
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					style="width: 1.25rem;"
+					style="width: 1.75rem;"
 					viewBox="0 0 24 24"
 					fill="currentColor"
 				>
@@ -40,7 +40,7 @@
 				rel="noopener"
 				href="https://github.com/pmaguire"
 			>
-				<svg xmlns="http://www.w3.org/2000/svg" style="width: 1.25rem;" viewBox="0 0 16 16">
+				<svg xmlns="http://www.w3.org/2000/svg" style="width: 1.75rem;" viewBox="0 0 16 16">
 					<path
 						fill="currentColor"
 						fill-rule="evenodd"
@@ -95,7 +95,7 @@
 		color: var(--color-text);
 		letter-spacing: 0.01rem;
 		font-weight: 600;
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 		padding-right: 1rem;
 	}
 
