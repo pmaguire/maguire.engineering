@@ -36,10 +36,7 @@
 
 	span {
 		grid-area: inner-span;
-		transition:
-			transform var(--transition-time),
-			opacity calc(var(--transition-time) / 2),
-			filter var(--hover-transition-time);
+
 		transform-origin: center bottom;
 		font-size: 1.75rem;
 	}
@@ -62,5 +59,18 @@
 	.sun.light,
 	.moon.dark {
 		opacity: 0;
+		transition:
+			transform var(--transition-time),
+			opacity var(--transition-time) cubic-bezier(0.12, 0.95, 0, 1),
+			filter var(--hover-transition-time);
+	}
+
+	.sun.dark,
+	.moon.light {
+		opacity: 1;
+		transition:
+			transform var(--transition-time),
+			opacity var(--transition-time) cubic-bezier(0.76, 0.02, 0.48, 0.01),
+			filter var(--hover-transition-time);
 	}
 </style>
