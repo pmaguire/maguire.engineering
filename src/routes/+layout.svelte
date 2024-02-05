@@ -58,6 +58,7 @@
 		);
 		transition: var(--transition-std);
 	}
+	/* Any page where the Map component is NOT loaded */
 	main:not(:has(.map-wrap)) {
 		max-width: 800px;
 		margin: 0 auto;

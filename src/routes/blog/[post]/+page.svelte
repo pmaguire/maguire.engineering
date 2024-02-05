@@ -4,6 +4,6 @@
 
 <article>
 	<h1>{data.title}</h1>
-	<h4>Order: {data.order}</h4>
+	<h2>Order: {data.order}</h2>
 	<svelte:component this={data.content} />
 </article>

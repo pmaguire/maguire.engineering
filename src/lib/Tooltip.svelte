@@ -1,5 +1,5 @@
-<script lang="ts">
-	export let title: string, evt: MouseEvent
+<script>
+	export let title, evt
 </script>
 
 <div
