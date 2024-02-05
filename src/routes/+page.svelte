@@ -21,7 +21,7 @@
 		other things.
 	</p>
 
-	<h4>Here's my story ↓</h4>
+	<h2>Here's my story ↓</h2>
 </section>
 
 <section>
@@ -31,6 +31,10 @@
 <style>
 	h1 {
 		font-size: 2rem;
+		font-weight: 300;
+	}
+	h2 {
+		font-size: 1.5rem;
 		font-weight: 300;
 	}
 	.lead {

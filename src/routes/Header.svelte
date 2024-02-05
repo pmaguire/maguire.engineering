@@ -1,11 +1,12 @@
 <script>
 	import ThemeSelector from './ThemeSelector.svelte'
 	import tooltip from '$lib/tooltip'
+	import { page } from '$app/stores'
 </script>
 
 <header>
 	<div class="home-link">
-		<a href="/">
+		<a href="/" aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 			<span class="main-icon">/<span class="accent">.*</span>/</span>
 			<div class="title">
 				<span class="title-a">MAGUIRE</span><span class="title-b">.ENGINEERING</span>

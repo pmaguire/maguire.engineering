@@ -320,7 +320,7 @@
 				src="/images/usc-logo.svg"
 				alt="Seal for the University of Southern California"
 			/>
-			<h3>University of Southern California</h3>
+			<span class="title">University of Southern California</span>
 		</span>
 		<p>
 			I joined USC straight out of high school to study Civil Engineering. I took a few programming
@@ -339,7 +339,7 @@
 	<section id="tanzania">
 		<span class="title-block">
 			<img class="icon" src="/images/peace-corps-logo.svg" alt="Peace Corps circular logo" />
-			<h3>Peace Corps</h3>
+			<span class="title">Peace Corps</span>
 		</span>
 		<p>
 			I lived in Tanzania for two years and three months, teaching physics and mathematics to high
@@ -360,7 +360,7 @@
 				src="/images/msf-logo.png"
 				alt="Doctors Without Borders running person logo"
 			/>
-			<h3>Doctors Without Borders - South Sudan</h3>
+			<span class="title">Doctors Without Borders - South Sudan</span>
 		</span>
 		<p>
 			After the Peace Corps, I joined Doctors Without Borders (Médecins Sans Frontières), and spent
@@ -379,7 +379,7 @@
 				src="/images/msf-logo.png"
 				alt="Doctors Without Borders running person logo"
 			/>
-			<h3>Doctors Without Borders - Haiti</h3>
+			<span class="title">Doctors Without Borders - Haiti</span>
 		</span>
 		<p>
 			After a devastating earthquake hit Haiti in early 2010, I joined Doctors Without Borders'
@@ -399,7 +399,7 @@
 	<section id="oakland">
 		<span class="title-block">
 			<img class="icon" src="/images/sungevity-logo.png" alt="Sungevity Sfunstar logo" />
-			<h3>Sungevity</h3>
+			<span class="title">Sungevity</span>
 		</span>
 		<p>
 			After spending most of my 20's out of the country, I was ready to stay in one place and find a
@@ -420,7 +420,7 @@
 	<section id="colorado">
 		<span class="title-block">
 			<img class="icon" src="/images/catalyze-logo.png" alt="Catalyze basic logo" />
-			<h3>Catalyze</h3>
+			<span class="title">Catalyze</span>
 		</span>
 		<p>
 			I joined Catalyze as the second employee, brought on to build out the software platform from
@@ -440,7 +440,7 @@
 	<section id="summary">
 		<span class="title-block">
 			<span class="icon" style="padding-bottom: 0.35rem;">⛰️</span>
-			<h3>What's next?</h3>
+			<span class="title">What's next?</span>
 		</span>
 		<p>
 			After deciding to move on from Catalyze, I've taken a few months off to do some much needed
@@ -517,7 +517,9 @@
 		display: flex;
 		align-items: center;
 		vertical-align: middle;
-		& h3 {
+		& .title {
+			font-weight: 400;
+			font-size: 1.2rem;
 			margin: 0 0.75rem;
 		}
 	}

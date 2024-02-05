@@ -19,13 +19,18 @@
 	})
 </script>
 
-<button on:click={click} title="Enable {$theme === 'light' ? 'dark' : 'light'} mode" use:tooltip>
+<button
+	type="button"
+	on:click={click}
+	title="Enable {$theme === 'light' ? 'dark' : 'light'} mode"
+	use:tooltip
+>
 	{#if loaded}
 		<span class="sun {$theme}" style="transform: rotate({sunRotation}deg)">🌞</span>
 		<span class="moon {$theme}" style="transform: rotate({moonRotation}deg)">🌒</span>
 	{/if}
-	<div class="horizon" />
 </button>
+<div class="horizon" />
 
 <style>
 	button {
