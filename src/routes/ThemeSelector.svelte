@@ -63,6 +63,7 @@
 
 	.sun.light,
 	.moon.dark {
+		pointer-events: none;
 		opacity: 0;
 		transition:
 			transform var(--transition-time),
